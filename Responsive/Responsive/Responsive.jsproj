@@ -74,9 +74,6 @@
     <Content Include="pages\itemDetail\itemDetail.css" />
     <Content Include="pages\itemDetail\itemDetail.html" />
     <Content Include="pages\itemDetail\itemDetail.js" />
-    <Content Include="pages\groupDetail\groupDetail.css" />
-    <Content Include="pages\groupDetail\groupDetail.html" />
-    <Content Include="pages\groupDetail\groupDetail.js" />
     <Content Include="pages\groupedItems\groupedItems.css" />
     <Content Include="pages\groupedItems\groupedItems.html" />
     <Content Include="pages\groupedItems\groupedItems.js" />

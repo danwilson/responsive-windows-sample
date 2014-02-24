@@ -13,15 +13,14 @@
     <div class="headertemplate" data-win-control="WinJS.Binding.Template">
         <button class="group-header win-type-x-large win-type-interactive" role="link" tabindex="-1" type="button">
             <span class="group-title win-type-ellipsis" data-win-bind="textContent: title"></span>
-            <span class="group-chevron"></span>
         </button>
     </div>
 
     <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
         <div class="item">
-            <div class="item-overlay">
+            <div class="item-overlay" data-win-bind="style.backgroundImage: photoUrl">
                 <h4 class="item-title" data-win-bind="textContent: title"></h4>
-                <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6>
+                <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: realname"></h6>
             </div>
         </div>
     </div>
@@ -39,15 +38,10 @@
             <div class="groupeditemslist win-selectionstylefilled" aria-label="List of groups" data-win-control="WinJS.UI.ListView" data-win-options="{
                     layout: {type: WinJS.UI.GridLayout, groupHeaderPosition: 'top'},
                     selectionMode: 'multi',
-                    tapBehavior: 'toggleSelect',
+                    tapBehavior: 'invokeOnly',
                     currentItem: {type: WinJS.UI.ObjectType.item, index: 0, hasFocus: true},
-                    groupDataSource: Data.groups.dataSource,
                     groupHeaderTemplate: select('.headertemplate'),
-                    itemDataSource: Data.items.dataSource,
-                    itemTemplate: select('.itemtemplate'),
-                    ongroupheaderinvoked: select('.pagecontrol').winControl.groupHeaderInvoked,
-                    oniteminvoked: select('.pagecontrol').winControl.itemInvoked,
-                    itemsReorderable: true
+                    itemTemplate: select('.itemtemplate')
                 }">
             </div>
         </section>
