@@ -1,0 +1,200 @@
+﻿.groupeditemspage2 section[role=main] {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+}
+
+.groupeditemspage2 .toggle-list-view {
+    line-height: 2;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    z-index:10;
+}
+
+.groupeditemspage2 .square {
+    touch-action: cross-slide-y;
+    color:#f00;
+    width: 200px;
+    height:200px;
+}
+
+.groupeditemspage2 .groupeditemslist {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    padding-top: 12.8rem;
+}
+    .groupeditemspage2 .groupeditemslist .zoomedInList {
+        padding-top: 12.8rem;
+    }
+    .groupeditemspage2 .groupeditemslist .zoomedOutList {
+        padding-top: 12.8rem;
+    }
+    
+    .groupeditemspage2 .groupeditemslist .list-group-items {
+        column-width: 15rem;
+    }
+    /* This selector is used to prevent ui-dark/light.css from overwriting changes
+       to .win-surface. */
+    .groupeditemspage2 .groupeditemslist .win-horizontal.win-viewport .win-surface {
+        margin-bottom: 60px;
+        margin-left: 45px;
+        margin-right: 115px;
+        margin-top: 128px;
+    }
+
+    .groupeditemspage2 .groupeditemslist.win-rtl .win-horizontal.win-viewport .win-surface {
+        margin-left: 115px;
+        margin-right: 45px;
+    }
+
+    .groupeditemspage2 .groupeditemslist .win-groupheader {
+        padding: 0;
+    }
+
+    /* Use grid and top level layout for truncation */
+    .groupeditemspage2 .groupeditemslist .group-header {
+        -ms-grid-columns: minmax(0, max-content) 7px max-content;
+        -ms-grid-rows: max-content;
+        display: -ms-inline-grid;
+        line-height: 1.5;
+    }
+
+    /* Override default button styles */
+    .groupeditemspage2 .groupeditemslist .group-header, .group-header:hover, .group-header:hover:active {
+        background: transparent;
+        border: 0;
+        margin-bottom: 1px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 1px;
+        min-height: 0;
+        padding: 0;
+    }
+
+        .groupeditemspage2 .groupeditemslist .group-header .group-title {
+            display: inline-block;
+        }
+
+        .groupeditemspage2 .groupeditemslist .group-header .group-chevron {
+            -ms-grid-column: 3;
+            display: inline-block;
+        }
+
+            .groupeditemspage2 .groupeditemslist .group-header .group-chevron::before {
+                content: "\E26B";
+                font-family: 'Segoe UI Symbol';
+            }
+
+            .groupeditemspage2 .groupeditemslist .group-header .group-chevron:-ms-lang(ar, dv, fa, he, ku-Arab, pa-Arab, prs, ps, sd-Arab, syr, ug, ur, qps-plocm)::before {
+                content: "\E26C";
+            }
+
+    .groupeditemspage2 .groupeditemslist .item {
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 1fr 90px;
+        display: -ms-grid;
+        height: 15rem;
+        width: 15rem;
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+1) {
+        background: rgba(230, 30, 30, .9);
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+1) {
+        background: rgba(30, 230, 230, .9);
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+2) {
+        background: rgba(230, 30, 30, .75);
+    
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+2) {
+        background: rgba(30, 230, 230, .75);
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+3) {
+        background: rgba(230, 30, 30, .6);
+    
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+3) {
+        background: rgba(30, 230, 230, .6);
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+4) {
+        background: rgba(230, 30, 30, .45);
+    
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+4) {
+        background: rgba(30, 230, 230, .45);
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+5) {
+        background: rgba(230, 30, 30, .3);
+    
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+5) {
+        background: rgba(30, 230, 230, .3);
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n) {
+        background: rgba(230, 30, 30, .2);
+    
+    }
+    .groupeditemspage2 .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n) {
+        background: rgba(30, 230, 230, .2);
+    }
+
+        .groupeditemspage2 .groupeditemslist .item .item-image {
+            -ms-grid-row-span: 2;
+        }
+
+        .groupeditemspage2 .groupeditemslist .item .item-overlay {
+            -ms-grid-row: 2;
+            -ms-grid-rows: 1fr 21px;
+            background: rgba(0, 0, 0, 0.65);
+            display: -ms-grid;
+            padding: .6rem 1.5rem .2rem;
+        }
+
+            .groupeditemspage2 .groupeditemslist .item .item-overlay .item-title {
+                -ms-grid-row: 1;
+                color: rgba(255, 255, 255, 0.87);
+                overflow: hidden;
+                width: 100%;
+            }
+
+            .groupeditemspage2 .groupeditemslist .item .item-overlay .item-subtitle {
+                -ms-grid-row: 2;
+                color: rgba(255, 255, 255, 0.6);
+                width: 100%;
+            }
+
+    .groupeditemspage2 .groupeditemslist .zoomedOutList .list-group {
+        height: auto;
+        display: inline-block;
+    }
+    .groupeditemspage2 .groupeditemslist .zoomedOutList .list-group h2 {
+        background: rgba(30, 230, 230, .75);
+        padding: 3rem 1rem 0;
+        text-align: center;
+        width: 18rem;
+        height: 24rem;
+        margin-right: 4rem;
+        display: inline-block;
+    }
+
+@media screen and (min-width: 50rem) {    
+    .groupeditemspage2 .groupeditemslist .list-group-items {
+        column-width: 22.5rem;
+        margin-right: 6rem;
+        column-gap: 1rem;
+        padding-top: 2rem;
+    }
+    .groupeditemspage2 .groupeditemslist .item {
+        height: 22.5rem;
+        width: 22.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (-ms-high-contrast) {
+    .groupeditemspage2 .groupeditemslist .item .item-overlay {
+        color: WindowText;
+    }
+}

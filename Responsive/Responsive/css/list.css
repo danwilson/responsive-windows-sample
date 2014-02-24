@@ -1,0 +1,222 @@
+﻿.semanticZoom,
+.noSemanticZoom {
+    box-sizing: border-box;
+    width: auto;
+    max-width:100%;
+    height: calc(100% - 30px);
+    margin-top: 0px;
+    position: relative;
+    overflow: hidden;
+    -ms-touch-action: pan-x;
+}
+
+.zoomedInList,
+.zoomedOutList {
+    box-sizing: border-box;
+    padding-left: 120px;
+    height: 100%;
+    max-width:100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    visibility: hidden;
+    -ms-touch-action: pan-x;
+}
+.rendered .zoomedInList,
+.rendered .zoomedOutList {
+    visibility: visible;
+}
+.semanticZoom .zoomedInList,
+.semanticZoom .zoomedOutList {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.semantic-zoom-control {
+    width:25px;
+    height:25px;
+    background-color: rgba(216, 216, 216, 0.33);
+    color: rgb(250, 250, 250);
+    text-align: center;
+    position:fixed;
+    right:5px;
+    bottom:25px;
+}
+.zoom-disabled .semantic-zoom-control {
+    display:none;
+}
+.semantic-zoom-control:hover {
+    background-color: rgba(216, 216, 216, 1);
+}
+.semantic-zoom-control:active {
+    background-color: rgb(0, 0, 0);
+}
+.semantic-zoom-control::before {
+    font-family: "Segoe UI Symbol";
+    font-weight: normal;
+    font-size: 11pt;
+    content: "\E0B8"; /* minus sign */
+}
+
+.zoomedInList .list-group {
+    box-sizing: border-box;
+    height: 100%;
+    display: inline-block;
+}
+
+.zoomedInList .list-group-items {
+    box-sizing: border-box;
+    height: calc(100% - 100px);
+    columns: 300px;
+    column-gap: 20px;
+}
+
+.zoomedInList .list-group-item {
+    box-sizing: border-box;
+    width: 100%;
+    break-inside: avoid;
+}
+
+.zoomedInList.invokable .list-group-item:active {
+    transform: scale(.975);
+}
+
+.zoomedOutList .list-group {
+    box-sizing: border-box;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+.zoomedOutList .list-group-placeholder {
+    box-sizing: border-box;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background:rgba(100,100,100,0);
+    /*animation: rearrange-list .125s 0s 1 ease;*/
+}
+@keyframes rearrange-list {
+    0% {
+        width:0;
+    }
+    100% {
+        width:2em;
+    }
+}
+
+/*If ListLayout instead of GridLayout (typically used in Snapped View)*/
+    .semanticZoom.listLayout,
+    .noSemanticZoom.listLayout {
+        -ms-touch-action: pan-x pan-y;
+    }
+    .listLayout .zoomedInList,
+    .listLayout .zoomedOutList {
+        padding-left: 20px;
+        white-space: normal;
+        overflow: auto;
+        -ms-touch-action: pan-x pan-y;
+    }
+
+    .listLayout .zoomedInList .list-group {
+        display: block;
+        height: auto;
+    }
+    .listLayout .zoomedInList .list-group-items {
+        column-width: auto;
+        column-gap: 0;
+    }
+
+    .listLayout .zoomedOutList .list-group {
+        display: block;
+        height: auto;
+    }
+    
+.zoomedInList .list-group.hidden, 
+.zoomedOutList .list-group.hidden {
+    display: none;
+}
+
+
+.zoomedInList.selectable .list-group-item > *:first-child,
+.zoomedOutList.selectable .list-group > *:first-child {
+    border: 3px solid transparent;
+}
+.zoomedInList.selectable .list-group-item.selected > *:first-child,
+.zoomedOutList.selectable .list-group.selected > *:first-child,
+.zoomedInList.selectable .list-group-item.almost-selected > *:first-child,
+.zoomedOutList.selectable .list-group.almost-selected > *:first-child {
+    border-color: rgba(251, 195, 78, 1);
+    position: relative;
+}
+.zoomedInList.selectable .list-group-item.almost-selected.selected > *:first-child,
+.zoomedOutList.selectable .list-group.almost-selected.selected > *:first-child {
+    border-color: transparent;
+}
+    .zoomedInList.selectable .list-group-item > *:first-child::before,
+    .zoomedOutList.selectable .list-group > :first-child::before,
+    .zoomedInList.selectable .list-group-item > *:first-child::after,
+    .zoomedOutList.selectable .list-group > :first-child::after {
+        display: block;
+        opacity: 0;
+    }
+
+    .zoomedInList.selectable .list-group-item.selected > *:first-child::before,
+    .zoomedOutList.selectable .list-group.selected > :first-child::before {
+        display: block;
+        content: "";
+        border-top-color: rgba(251, 195, 78, 1);
+        border-right-color: rgba(251, 195, 78, 1);
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border-width: 20px;
+        border-style: solid;
+        z-index: 3;
+        opacity: 1;
+    }
+
+    .zoomedInList.selectable .list-group-item.selected > *:first-child::after,
+    .zoomedOutList.selectable .list-group.selected > :first-child::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        color: #236522;
+        font-family: Segoe UI Symbol;
+        font-size: 12px;
+        z-index: 4;
+        width: 20px;
+        line-height: 24px;
+        text-align: center;
+        opacity: 1;
+    }
+
+.zoomedInList.selectable .list-group-item.almost-selected.selected > *:first-child::before,
+.zoomedOutList.selectable .list-group.almost-selected.selected > :first-child::before,
+.zoomedInList.selectable .list-group-item.almost-selected.selected > *:first-child::after,
+.zoomedOutList.selectable .list-group.almost-selected.selected > :first-child::after {
+    opacity: 0;
+}
+
+@media screen and (-ms-view-state:fullscreen-portrait) {
+    .zoomedInList,
+    .zoomedOutList {
+        padding-left: 100px;
+    }
+}
+@keyframes optimizer {
+    to {
+        opacity: 1;
+    }
+}

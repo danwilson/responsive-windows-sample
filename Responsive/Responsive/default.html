@@ -5,20 +5,24 @@
     <title>Responsive</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
 
     <!-- Responsive references -->
     <link href="/css/default.css" rel="stylesheet" />
+    <link href="/css/list.css" rel="stylesheet" />
     <script src="/js/data.js"></script>
     <script src="/js/navigator.js"></script>
     <script src="/js/default.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="/js/SelectableList.js"></script>
 </head>
 <body>
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/groupedItems/groupedItems.html'}"></div>
-    <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
-        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
-    </div> -->
+    <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'refreshCommand', label:'Refresh', icon:'refresh'}" type="button"></button>
+    </div>
 </body>
 </html>

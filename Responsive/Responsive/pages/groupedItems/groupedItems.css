@@ -3,6 +3,14 @@
     -ms-grid-row-span: 2;
 }
 
+.groupeditemspage .toggle-list-view {
+    line-height: 2;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    z-index: 10;
+}
+
 .groupeditemspage .groupeditemslist {
     height: 100%;
     position: relative;
@@ -70,8 +78,49 @@
         -ms-grid-columns: 1fr;
         -ms-grid-rows: 1fr 90px;
         display: -ms-grid;
-        height: 250px;
-        width: 250px;
+        height: 15rem;
+        width: 15rem;
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+1) {
+        background: rgba(230, 30, 30, .9);
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+1) {
+        background: rgba(30, 230, 230, .9);
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+2) {
+        background: rgba(230, 30, 30, .75);
+    
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+2) {
+        background: rgba(30, 230, 230, .75);
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+3) {
+        background: rgba(230, 30, 30, .6);
+    
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+3) {
+        background: rgba(30, 230, 230, .6);
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+4) {
+        background: rgba(230, 30, 30, .45);
+    
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+4) {
+        background: rgba(30, 230, 230, .45);
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n+5) {
+        background: rgba(230, 30, 30, .3);
+    
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n+5) {
+        background: rgba(30, 230, 230, .3);
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(even) .item:nth-of-type(6n) {
+        background: rgba(230, 30, 30, .2);
+    
+    }
+    .groupeditemspage .groupeditemslist:nth-of-type(odd) .item:nth-of-type(6n) {
+        background: rgba(30, 230, 230, .2);
     }
 
         .groupeditemspage .groupeditemslist .item .item-image {
@@ -98,6 +147,13 @@
                 color: rgba(255, 255, 255, 0.6);
                 width: 220px;
             }
+
+@media screen and (min-width: 50rem) {
+    .groupeditemspage .groupeditemslist .item {
+        height: 22.5rem;
+        width: 22.5rem;
+    }
+}
 
 @media screen and (-ms-high-contrast) {
     .groupeditemspage .groupeditemslist .item .item-overlay {

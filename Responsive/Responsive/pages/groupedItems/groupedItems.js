@@ -7,17 +7,19 @@
     ui.Pages.define("/pages/groupedItems/groupedItems.html", {
         // This function is called to initialize the page.
         init: function (element, options) {
-            this.groupHeaderInvoked = ui.eventHandler(this._groupHeaderInvoked.bind(this));
-            this.itemInvoked = ui.eventHandler(this._itemInvoked.bind(this));
         },
 
         // This function is called whenever a user navigates to this page.
         ready: function (element, options) {
+
+            element.querySelector('.toggle-list-view').addEventListener('click', function (e) {
+                nav.navigate('/pages/groupedItemsCustom/groupedItems.html', {});
+            }, false);
         },
 
         updateLayout: function (element) {
             /// <param name="element" domElement="true" />
-
+            document.querySelector('.groupeditemslist').winControl.recalculateItemPosition();
             // TODO: Respond to changes in layout.
         },
 

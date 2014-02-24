@@ -119,4 +119,126 @@
 
         return sampleItems;
     }
+
+
+    WinJS.Namespace.define("DataCustom", {
+        list: [{
+            GroupName: "Group 1",
+            Items: [{
+                title: "Item Title: 1",
+                subtitle: "Item Subtitle: 1"
+            }, {
+                title: "Item Title: 2",
+                subtitle: "Item Subtitle: 2"
+            }, {
+                title: "Item Title: 3",
+                subtitle: "Item Subtitle: 3"
+            }, {
+                title: "Item Title: 4",
+                subtitle: "Item Subtitle: 4"
+            }, {
+                title: "Item Title: 5",
+                subtitle: "Item Subtitle: 5"
+            }]
+        }, {
+            GroupName: "Group 2",
+            Items: [{
+                title: "Item Title: 1",
+                subtitle: "Item Subtitle: 1"
+            }, {
+                title: "Item Title: 2",
+                subtitle: "Item Subtitle: 2"
+            }, {
+                title: "Item Title: 3",
+                subtitle: "Item Subtitle: 3"
+            }]
+        }, {
+            GroupName: "Group 3",
+            Items: [{
+                title: "Item Title: 1",
+                subtitle: "Item Subtitle: 1"
+            }, {
+                title: "Item Title: 2",
+                subtitle: "Item Subtitle: 2"
+            }, {
+                title: "Item Title: 3",
+                subtitle: "Item Subtitle: 3"
+            }, {
+                title: "Item Title: 4",
+                subtitle: "Item Subtitle: 4"
+            }, {
+                title: "Item Title: 5",
+                subtitle: "Item Subtitle: 5"
+            }, {
+                title: "Item Title: 6",
+                subtitle: "Item Subtitle: 6"
+            }, {
+                title: "Item Title: 7",
+                subtitle: "Item Subtitle: 7"
+            }]
+        }, {
+            GroupName: "Group 4",
+            Items: [{
+                title: "Item Title: 1",
+                subtitle: "Item Subtitle: 1"
+            }, {
+                title: "Item Title: 2",
+                subtitle: "Item Subtitle: 2"
+            }, {
+                title: "Item Title: 3",
+                subtitle: "Item Subtitle: 3"
+            }, {
+                title: "Item Title: 4",
+                subtitle: "Item Subtitle: 4"
+            }, {
+                title: "Item Title: 5",
+                subtitle: "Item Subtitle: 5"
+            }, {
+                title: "Item Title: 6",
+                subtitle: "Item Subtitle: 6"
+            }]
+        }, {
+            GroupName: "Group 5",
+            Items: [{
+                title: "Item Title: 1",
+                subtitle: "Item Subtitle: 1"
+            }, {
+                title: "Item Title: 2",
+                subtitle: "Item Subtitle: 2"
+            }, {
+                title: "Item Title: 3",
+                subtitle: "Item Subtitle: 3"
+            }, {
+                title: "Item Title: 4",
+                subtitle: "Item Subtitle: 4"
+            }]
+        }, {
+            GroupName: "Group 6",
+            Items: [{
+                title: "Item Title: 1",
+                subtitle: "Item Subtitle: 1"
+            }, {
+                title: "Item Title: 2",
+                subtitle: "Item Subtitle: 2"
+            }, {
+                title: "Item Title: 3",
+                subtitle: "Item Subtitle: 3"
+            }, {
+                title: "Item Title: 4",
+                subtitle: "Item Subtitle: 4"
+            }, {
+                title: "Item Title: 5",
+                subtitle: "Item Subtitle: 5"
+            }, {
+                title: "Item Title: 6",
+                subtitle: "Item Subtitle: 6"
+            }, {
+                title: "Item Title: 7",
+                subtitle: "Item Subtitle: 7"
+            }, {
+                title: "Item Title: 8",
+                subtitle: "Item Subtitle: 8"
+            }]
+        }]
+    });
 })();

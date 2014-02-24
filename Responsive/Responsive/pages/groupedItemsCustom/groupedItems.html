@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>groupedItemsPage</title>
+
+    <link href="/pages/groupedItemsCustom/groupedItems.css" rel="stylesheet" />
+    <script src="/js/data.js"></script>
+    <script src="/pages/groupedItemsCustom/groupedItems.js"></script>
+</head>
+<body>
+    <!-- Template for the group headers in the zoomed-out view. -->
+    <div id="groupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <h2 data-win-bind="innerText: GroupName"></h2>
+    </div>
+
+    <!-- Template for the zoomed in view of the semantic view. -->
+    <div id="zoomedInItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <div class="item-overlay">
+                <h4 class="item-title" data-win-bind="textContent: title"></h4>
+                <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment groupeditemspage2">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Responsive</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <p class="toggle-list-view">(Switch to WinJS.ListView)</p>
+            <div class="groupeditemslist custom" id="semanticZoom" data-win-control="UI.SelectableList"></div>
+        </section>
+    </div>
+</body>
+</html>
