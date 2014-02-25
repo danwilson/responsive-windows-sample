@@ -27,7 +27,7 @@
             }
             this.pastries = WinJS.xhr({
                 type: 'GET',
-                url: 'https://the-pastry-box-project.net/api/v1/consume/thoughts?day='+this.todayFormatted+'&previous=21',
+                url: 'https://the-pastry-box-project.net/api/v1/consume/thoughts?day='+this.todayFormatted+'&previous=25',
                 responseType: 'json'
             });
         },
@@ -76,7 +76,8 @@
             }
             var articleList = new WinJS.Binding.List(articles);
             this.listView.itemDataSource = articleList.dataSource;
-            this.listView.groupDataSource = articleList.createGrouped(this.getGroupKey, this.getGroupData).groups.dataSource;
+            this.groupedItems = articleList.createGrouped(this.getGroupKey, this.getGroupData);
+            this.listView.groupDataSource = this.groupedItems.groups.dataSource;
         },
         unload: function() {
 
@@ -89,8 +90,8 @@
         },
 
         _itemInvoked: function (args) {
-            var item = Data.items.getAt(args.detail.itemIndex);
-            nav.navigate("/pages/itemDetail/itemDetail.html", { item: Data.getItemReference(item) });
+            var item = this.groupedItems.getAt(args.detail.itemIndex);
+            nav.navigate("/pages/itemDetail/itemDetail.html", { item: item });
         },
         stopProgress: function () {
 

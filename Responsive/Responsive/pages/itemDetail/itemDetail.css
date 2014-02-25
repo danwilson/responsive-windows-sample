@@ -1,4 +1,55 @@
 ﻿.itemdetailpage section[role=main] {
-    margin-left: 120px;
-    margin-right: 120px;
+    padding-right: 2400rem;
 }
+
+.main-article {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.main-article article {
+    display: inline-block;
+    box-sizing: border-box;
+    column-fill: auto;
+    column-width: 30rem;
+    column-gap: 5rem;
+    height: 100%;
+    width: 100%;
+    margin-left: 12rem;
+    margin-right: 12rem;
+    padding: 3rem 0;
+}
+    .main-article .author {
+        width: 100%;
+        height: 10rem;
+        margin-bottom: 2.1rem;
+        background: rgba(230, 30, 30, .8) left top no-repeat;
+        background-size: contain;
+    }
+    
+        .main-article .author .details {
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 11rem;
+        }
+
+            .main-article .author .details .name {
+                color: rgb(250, 250, 250);
+                font-size: 16pt;
+            }
+
+            .main-article .author .details .subtitle {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: rgba(250, 250, 250, .7);
+            }
+
+    .main-article p {
+        margin: 0;
+        padding-bottom: 2rem;
+        break-inside: avoid;
+    }
