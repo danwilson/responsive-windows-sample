@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>author</title>
+
+    <link href="/pages/author/author.css" rel="stylesheet" />
+    <script src="/pages/author/author.js"></script>
+</head>
+<body>
+    <!-- These templates are used to display each item in the ListView declared below. -->
+    <div class="headertemplate" data-win-control="WinJS.Binding.Template">
+        <div class="group-header win-type-x-large win-type-interactive" role="link">
+            <span class="group-title win-type-ellipsis" data-win-bind="textContent: title"></span>
+        </div>
+    </div>
+
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <div class="item-overlay" data-win-bind="style.backgroundImage: photoUrl">
+                <h4 class="item-title" data-win-bind="textContent: title"></h4>
+                <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: realname"></h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment authorpage">
+        <header aria-label="Header content" role="banner">
+            <button data-win-control="WinJS.UI.BackButton"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle"></span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="groupeditemslist win-selectionstylefilled" aria-label="List of groups" data-win-control="WinJS.UI.ListView" data-win-options="{
+                    layout: {type: WinJS.UI.GridLayout, groupHeaderPosition: 'top'},
+                    selectionMode: 'multi',
+                    tapBehavior: 'invokeOnly',
+                    currentItem: {type: WinJS.UI.ObjectType.item, index: 0, hasFocus: true},
+                    groupHeaderTemplate: select('.headertemplate'),
+                    itemTemplate: select('.itemtemplate')
+                }">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

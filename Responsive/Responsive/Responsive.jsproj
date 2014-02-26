@@ -68,6 +68,9 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\SelectableList.js" />
+    <Content Include="pages\author\author.css" />
+    <Content Include="pages\author\author.html" />
+    <Content Include="pages\author\author.js" />
     <Content Include="pages\groupedItemsCustom\groupedItems.css" />
     <Content Include="pages\groupedItemsCustom\groupedItems.html" />
     <Content Include="pages\groupedItemsCustom\groupedItems.js" />

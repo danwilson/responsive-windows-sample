@@ -25,31 +25,52 @@
     .main-article .author {
         width: 100%;
         height: 10rem;
-        margin-bottom: 2.1rem;
+        margin-bottom: 4.0rem;
         background: rgba(230, 30, 30, .8) left top no-repeat;
         background-size: contain;
     }
     
         .main-article .author .details {
-                width: 100%;
-                box-sizing: border-box;
-                padding-left: 11rem;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding-left: 11rem;
+            display: flex;
+            flex: 1;
+            justify-content: flex-start;
+            align-items: center;
         }
 
             .main-article .author .details .name {
                 color: rgb(250, 250, 250);
                 font-size: 16pt;
-            }
-
-            .main-article .author .details .subtitle {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                color: rgba(250, 250, 250, .7);
+                padding-bottom: 0;
             }
 
     .main-article p {
         margin: 0;
         padding-bottom: 2rem;
         break-inside: avoid;
+    }
+    .main-article blockquote,
+    .main-article ol,
+    .main-article ul,
+    .main-article li {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .main-article li {
+        padding-bottom: 2rem;
+    }
+    .main-article h1,
+    .main-article h2,
+    .main-article h3,
+    .main-article h4,
+    .main-article h5,
+    .main-article h6,
+    .main-article h7 {
+        font-weight: 600;
+        font-size: 11pt;
+        line-height: 1.3636;
+        padding-bottom: 2rem;
     }
