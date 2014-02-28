@@ -11,28 +11,31 @@
         ready: function (element, options) {
             this.item = options.item;
             this.element = element;
-            this.element.querySelector(".titlearea .pagetitle").textContent = this.item.title;
+            this.element.querySelector(".titlearea .pagetitle").innerHTML = this.item.title;
             this.prepareArticle();
         },
         selectAuthor: function() {
             nav.navigate("/pages/author/author.html", { author: this.item.slug, name: this.item.realname  });
         },
+        keypressAuthor: function(e) {
+            if (e.which === 13) {
+                this.selectAuthor();
+            }
+        },
         prepareArticle: function () {
             var article = this.element.querySelector(".main-article article");
-            var author = document.createElement('div');
-            var name = document.createElement('p');
+            var author;
+            var name;
             var images;
 
-            article.innerHTML = '<div class="author" role="link"></div>' + this.item.thought;
-            author.classList.add('details');
-            author.appendChild(name);
-
-            name.classList.add('name');
+            article.innerHTML = article.innerHTML + this.item.thought;
+            author = article.querySelector('.author');
+            name = author.querySelector('.name');
             name.innerText = this.item.realname;
 
-            article.querySelector('.author').appendChild(author);
-            author.parentNode.style.backgroundImage = 'url(' + this.item.photo + ')';
-            author.parentNode.addEventListener("click", this.selectAuthor.bind(this), false);
+            author.style.backgroundImage = 'url(' + this.item.photo + ')';
+            author.addEventListener("click", this.selectAuthor.bind(this), false);
+            author.addEventListener("keypress", this.keypressAuthor.bind(this), false);
 
             images = article.querySelectorAll('img:not([src])');
             if (images && images.length) {

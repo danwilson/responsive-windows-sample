@@ -2,15 +2,12 @@
     font-size: 62.5%;
 }
 body {
-}
-* {
-    //box-sizing: border-box;
+    background: #fdfdff url(../images/win8talk.png) left top no-repeat; 
 }
 
 #contenthost {
     height: 100%;
     width: 100%;
-    background: #fafaf8;
     color: #333;
 }
 
