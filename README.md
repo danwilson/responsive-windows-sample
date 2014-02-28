@@ -9,6 +9,12 @@ This is not a large scale app.  It is kept simple for demonstration.  Many of th
 
 This is a work in progress, and I am committing as I complete pieces that demonstrate bullet points in the corresponding talk.
 
+TODO: 
+Wrap up GestureRecognizer example (as alternate ListView)
+Warp up vertical media query example on article view
+
+
+
 #Up and Running
 
 Clone the repo to your Windows machine, and open `Responsive/Responsive.sln` with Visual Studio 2013 (Express version is free).
