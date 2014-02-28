@@ -100,6 +100,9 @@
     display: block;
     box-sizing: border-box;
     width: 100%;
+    max-height: 70%;
+    overflow: hidden;
+    overflow-x: auto;
     margin-top: 2rem;
     transform: translateY(-2rem);
     background: rgba(230, 30, 30, .8);
@@ -113,3 +116,17 @@
     .extra[data-state=closed] {
         transform: translateY(-2rem);
     }
+
+
+@media all and (min-height: 64em) { /* 70em = 1024px */
+    .main-article {
+        height: 70%;
+    }
+    .extra {
+        height: 30%;
+    }
+    .extra[data-state=open],
+    .extra[data-state=closed] {
+        transform: translateY(0);
+    }
+}
