@@ -140,7 +140,7 @@
             content: '\e018';
         }
         .extra[data-state=open] .toggle .button {
-            transform: rotate(180deg);
+            transform: rotate(180deg) translateY(.4rem);
         }
     .extra .extra-list {
         height: 100%;
