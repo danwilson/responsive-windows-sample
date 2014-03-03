@@ -55,8 +55,9 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="css\default.css" />
-    <Content Include="css\list.css" />
+    <Content Include="css\app.css" />
+    <Content Include="css\default.scss" />
+    <Content Include="css\list.scss" />
     <Content Include="images\logo.scale-100.png" />
     <Content Include="images\smalllogo.scale-100.png" />
     <Content Include="images\splashscreen.scale-100.png" />
@@ -69,19 +70,19 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\SelectableList.js" />
-    <Content Include="pages\author\author.css" />
     <Content Include="pages\author\author.html" />
     <Content Include="pages\author\author.js" />
-    <Content Include="pages\groupedItemsCustom\groupedItems.css" />
+    <Content Include="pages\author\author.scss" />
     <Content Include="pages\groupedItemsCustom\groupedItems.html" />
     <Content Include="pages\groupedItemsCustom\groupedItems.js" />
-    <Content Include="pages\itemDetail\itemDetail.css" />
+    <Content Include="pages\groupedItemsCustom\groupedItems.scss" />
+    <Content Include="pages\groupedItems\groupedItems.scss" />
     <Content Include="pages\itemDetail\itemDetail.html" />
     <Content Include="pages\itemDetail\itemDetail.js" />
-    <Content Include="pages\groupedItems\groupedItems.css" />
     <Content Include="pages\groupedItems\groupedItems.html" />
     <Content Include="pages\groupedItems\groupedItems.js" />
     <Content Include="default.html" />
+    <Content Include="pages\itemDetail\itemDetail.scss" />
     <None Include="Responsive_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
