@@ -43,6 +43,7 @@
                     
                     localStorage.setItem('articles', JSON.stringify({date: this.todayFormatted, articles: resp.response}));
                     this.prepareList(resp.response);
+                    this.prepareAlternateList(resp.response); //this is to setup an alternate data source for an alternate ListView
 
                 } else {
                     //none found
@@ -78,6 +79,32 @@
             this.listView.itemDataSource = articleList.dataSource;
             this.groupedItems = articleList.createGrouped(this.getGroupKey, this.getGroupData);
             this.listView.groupDataSource = this.groupedItems.groups.dataSource;
+        },
+        prepareAlternateList: function(response) {
+            var articles = JSON.parse(response);
+            var now = Date.now() / 1000;
+            var aWeekAgo = now - 604800;
+            var earlier = now - 1209600;
+            var result = [{ GroupName: "This Week", Items: [] }, { GroupName: "Last Week", Items: [] }, { GroupName: "Earlier", Items: [] } ];
+            for (var i = 0, length = articles.length; i < length; ++i) {
+                var current = articles[i];
+
+                if (!current.title) {
+                    current.title = current.nicedate;
+                }
+                if (current.photo) {
+                    current.photoUrl = 'url(' + current.photo + ')';
+                }
+
+                if (current.pubdate < earlier) {
+                    result[2].Items.push(current);
+                } else if (current.pubdate < aWeekAgo) {
+                    result[1].Items.push(current);
+                } else {
+                    result[0].Items.push(current);
+                }
+            }
+            localStorage.setItem("alternate", JSON.stringify(result));
         },
         unload: function() {
 

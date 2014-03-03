@@ -10,6 +10,17 @@
     <script src="/pages/itemDetail/itemDetail.js"></script>
 </head>
 <body>
+    <div id="groupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+        <h2 data-win-bind="innerText: GroupName"></h2>
+    </div>
+    <div id="zoomedInItemTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <div class="item-overlay">
+                <h4 class="item-title" data-win-bind="textContent: title"></h4>
+                <h5 class="item-subtitle" data-win-bind="textContent: realname"></h5>
+            </div>
+        </div>
+    </div>
     <!-- The content that will be loaded and displayed. -->
     <div class="itemdetailpage fragment">
         <header aria-label="Header content" role="banner">
@@ -21,7 +32,7 @@
         <section aria-label="Main content" role="main">
             <div class="main-article">
                 <article>
-                    <a class="author win-type-interactive" role="link" tabindex="1">
+                    <a class="author win-type-interactive" role="link" tabindex="1" href="">
                         <div class="details">
                             <p class="name"></p>
                         </div>
@@ -29,7 +40,8 @@
                 </article>
             </div>
             <div class="extra">
-                ...<br />...<br />..<br />...<br />..
+                <a href="" class="toggle"><span class="button"></span></a>
+                <div id="class-list" class="extra-list" data-win-control="UI.SelectableList"></div>
             </div>
         </section>
     </div>
