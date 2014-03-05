@@ -9,9 +9,13 @@ This is not a large scale app.  It is kept simple for demonstration.  Many of th
 
 This is a work in progress, and I am committing as I complete pieces that demonstrate bullet points in the corresponding talk.
 
+There is also a 'grunt' branch using Grunt and Sass.  I'm keeping this separate since there is some additional setup for Node, npm, Grunt, and Sass.  Master only needs a typical Windows Store development environment.  
+
 TODO: 
-Wrap up GestureRecognizer example (as alternate ListView)
-Warp up vertical media query example on article view
+* Wrap up GestureRecognizer example (as alternate ListView)
+* Add basic pointer example
+* Semantic Zoom on WinJS ListView for entry screen
+* Change to File API instead of localStorage
 
 
 
