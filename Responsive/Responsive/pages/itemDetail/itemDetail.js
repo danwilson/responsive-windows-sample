@@ -11,6 +11,8 @@
         appbar: undefined,
         gesture: undefined,
         list: undefined,
+        init: function(element, options) {
+        },
         ready: function (element, options) {
             this.appbar = document.getElementById('appbar').winControl;
             this.item = options.item;
@@ -61,6 +63,7 @@
         prepareExtraDetails: function() {
             var details = this.element.querySelector('.extra');
             var toggler = details.querySelector('.toggle');
+            var articles = JSON.parse(localStorage.getItem("alternate"));
 
             this.gesture = new MSGesture();
             this.gesture.target = details;
@@ -80,9 +83,16 @@
             this.list.isSemanticZoomable = false;
             //this.list.itemInvoked = this.itemInvoked.bind(this);
             this.list.isUpdateLayoutRequired = true;
-            this.list.dataSource = JSON.parse(localStorage.getItem("alternate"));
-
+            this.list.useItemDataAttachment = true;
+            this.list.dataSource = articles;
+            
             this.list.render();
+        },
+        itemInvoked: function (e, item) {
+            var data = item.data();
+            if (data) {
+                nav.navigate('/pages/itemDetail/itemDetail.html', { item: data });
+            }
         },
         toggleExtraDetails: function (e) {
             e.preventDefault();

@@ -749,7 +749,7 @@
                             newWidth;
 
                         if (items.length) {
-                            numRows = Math.floor(itemsContainer.height() / items.height());
+                            numRows = Math.floor(itemsContainer.outerHeight() / items.outerHeight());
                             numColumns = Math.ceil(items.length / numRows);
                             newWidth = numColumns * (parseInt(itemsContainer.css("column-width")) + parseInt(itemsContainer.css("column-gap")));
                             itemsContainer.width(newWidth);

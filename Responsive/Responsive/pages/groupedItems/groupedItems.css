@@ -12,7 +12,11 @@
     top: 0;
     right: 1rem;
     z-index: 10;
+    display: none;
 }
+    .groupeditemspage .toggle-list-view.enabled {
+        display: block;
+    }
 
 .groupeditemspage .groupeditemslist {
     height: 100%;

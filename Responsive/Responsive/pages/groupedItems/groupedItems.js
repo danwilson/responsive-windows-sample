@@ -34,7 +34,7 @@
 
         // This function is called whenever a user navigates to this page.
         ready: function (element, options) {
-            this.listView = document.querySelector('.groupeditemslist').winControl;
+            this.listView = document.querySelector('.groupeditemslist:not(.custom)').winControl;
             this.listView.addEventListener('iteminvoked', this._itemInvoked.bind(this));
 
             this.pastries.done(function (resp) {
@@ -44,7 +44,7 @@
                     localStorage.setItem('articles', JSON.stringify({date: this.todayFormatted, articles: resp.response}));
                     this.prepareList(resp.response);
                     this.prepareAlternateList(resp.response); //this is to setup an alternate data source for an alternate ListView
-
+                    element.querySelector('.toggle-list-view').classList.add('enabled');
                 } else {
                     //none found
                 }

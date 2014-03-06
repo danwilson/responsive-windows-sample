@@ -10,16 +10,16 @@
 </head>
 <body>
     <!-- Template for the group headers in the zoomed-out view. -->
-    <div id="groupHeaderTemplate" data-win-control="WinJS.Binding.Template">
+    <div id="groupHeaderCustomTemplate" data-win-control="WinJS.Binding.Template">
         <h2 data-win-bind="innerText: GroupName"></h2>
     </div>
 
     <!-- Template for the zoomed in view of the semantic view. -->
-    <div id="zoomedInItemTemplate" data-win-control="WinJS.Binding.Template">
+    <div id="zoomedInItemCustomTemplate" data-win-control="WinJS.Binding.Template">
         <div class="item">
-            <div class="item-overlay">
-                <h4 class="item-title" data-win-bind="textContent: title"></h4>
-                <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6>
+            <div class="item-overlay" data-win-bind="style.backgroundImage: photoUrl">
+                <h4 class="item-title" data-win-bind="innerHTML: title"></h4>
+                <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: realname"></h6>
             </div>
         </div>
     </div>
