@@ -19,6 +19,7 @@
         // This function is called whenever a user navigates to this page.
         ready: function (element, options) {
             this.element = element;
+            document.querySelector('progress').classList.remove('inactive');
             this.pastries.done(function (resp) {
                 this.stopProgress();
                 if (resp && resp.response && resp.response.length) {

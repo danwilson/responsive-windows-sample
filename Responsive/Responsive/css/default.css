@@ -5,6 +5,16 @@ body {
     background: #fdfdff url(../images/win8talk.png) left top no-repeat; 
 }
 
+progress {
+    width: 100%;
+    position:absolute;
+    top: 1rem;
+    left: 0;
+}
+progress.inactive {
+    display: none;
+}
+
 #contenthost {
     height: 100%;
     width: 100%;

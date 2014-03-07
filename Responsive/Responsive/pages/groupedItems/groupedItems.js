@@ -111,9 +111,7 @@
         },
 
         updateLayout: function (element) {
-            /// <param name="element" domElement="true" />
-            document.querySelector('.groupeditemslist').winControl.recalculateItemPosition();
-            // TODO: Respond to changes in layout.
+            element.querySelector('.groupeditemslist').winControl.recalculateItemPosition();
         },
 
         _itemInvoked: function (args) {
@@ -121,7 +119,7 @@
             nav.navigate("/pages/itemDetail/itemDetail.html", { item: item });
         },
         stopProgress: function () {
-
+            document.querySelector('progress').classList.add('inactive');
         },
         compareGroups: function (a, b) {
             return a - b;

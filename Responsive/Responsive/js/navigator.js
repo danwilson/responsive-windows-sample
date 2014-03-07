@@ -81,6 +81,7 @@
 
                 _navigated: function () {
                     this.pageElement.style.visibility = "";
+                    document.querySelector('progress').classList.add('inactive');
                     WinJS.UI.Animation.enterPage(this._getAnimationElements()).done();
                 },
 

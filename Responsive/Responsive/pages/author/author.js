@@ -24,6 +24,7 @@
 
         // This function is called whenever a user navigates to this page.
         ready: function (element, options) {
+            document.querySelector('progress').classList.remove('inactive');
             this.element.querySelector(".titlearea .pagetitle").textContent = options.name;
             this.listView = document.querySelector('.groupeditemslist').winControl;
             this.listView.addEventListener('iteminvoked', this._itemInvoked.bind(this));
@@ -69,7 +70,7 @@
             nav.navigate("/pages/itemDetail/itemDetail.html", { item: item });
         },
         stopProgress: function () {
-
+            document.querySelector('progress').classList.add('inactive');
         },
         getGroupKey: function (data) {
             return data.group;
